@@ -9,8 +9,8 @@ import streamlit as st
 tab1, tab2, tab3 = st.tabs(["Penguin Prediction", "Evaluation", "About"])
 
 with tab1:
-   st.header("A cat")
-   st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
+   st.header("Penguin species prediction")
+
 
 model = pickle.load(open('model.penguins.sav','rb'))
 species_encoder = pickle.load(open('encoder.species.sav','rb'))
@@ -36,4 +36,14 @@ x_new = pd.DataFrame(data=np.array([x1, x2, x3, x4, x5, x6]).reshape(1,-1),
 pred = model.predict(x_new)
 
 st.write('Predicted Species: ' , species_encoder.inverse_transform(pred)[0])
+
+with tab2:
+   st.header("Evaluation on five techniques")
+   st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+
+with tab3:
+   st.header("An owl")
+   evaluations = pickle.load(open('evals.all.sav','rb'))
+    evaluations
+    
 
