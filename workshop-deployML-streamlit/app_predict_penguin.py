@@ -1,4 +1,4 @@
-
+python -m pip show scikit-learn
 import numpy as np
 import pandas as pd
 import pickle
