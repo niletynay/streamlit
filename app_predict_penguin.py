@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 import pickle
+import plotly.graph_objects as px
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 import streamlit as st 
@@ -38,7 +39,7 @@ with tab2:
     evaluations = pickle.load(open('evals.all.sav','rb'))
     evaluations
     
-    x = evaluations.columns
+     x = evaluations.columns
     fig = px.Figure(data=[
         px.Bar(name = 'Decision Tree',
                x = x,
