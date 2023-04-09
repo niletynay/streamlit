@@ -38,12 +38,12 @@ pred = model.predict(x_new)
 st.write('Predicted Species: ' , species_encoder.inverse_transform(pred)[0])
 
 with tab2:
-   st.header("Evaluation on five techniques")
-   st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+    st.header("Evaluation on five techniques")
+    evaluations = pickle.load(open('evals.all.sav','rb'))
+    evaluations
+    
 
 with tab3:
    st.header("An owl")
-   evaluations = pickle.load(open('evals.all.sav','rb'))
-    evaluations
-    
+ 
 
