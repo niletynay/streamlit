@@ -9,7 +9,7 @@ import streamlit as st
 tab1, tab2, tab3 = st.tabs(["Penguin Prediction", "Evaluation", "About"])
 
 with tab1:
-   st.header("Penguin species prediction")
+    st.header("Penguin species prediction")
     model = pickle.load(open('model.penguins.sav','rb'))
     species_encoder = pickle.load(open('encoder.species.sav','rb'))
     island_encoder = pickle.load(open('encoder.island.sav','rb'))
@@ -31,7 +31,7 @@ with tab1:
 
     pred = model.predict(x_new)
 
-st.write('Predicted Species: ' , species_encoder.inverse_transform(pred)[0])
+    st.write('Predicted Species: ' , species_encoder.inverse_transform(pred)[0])
 
 with tab2:
     st.header("Evaluation on five techniques")
