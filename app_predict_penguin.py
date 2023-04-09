@@ -39,7 +39,7 @@ with tab2:
     evaluations = pickle.load(open('evals.all.sav','rb'))
     evaluations
     
-     x = evaluations.columns
+    x = evaluations.columns
     fig = px.Figure(data=[
         px.Bar(name = 'Decision Tree',
                x = x,
@@ -59,8 +59,4 @@ with tab2:
     ])
     st.plotly_chart(fig, use_container_width=True)
     
-
-with tab3:
-   st.header("About")
- 
 
