@@ -18,10 +18,10 @@ x1 = st.radio('Select island', island_encoder.classes_)
 x1 = island_encoder.transform([x1])[0]
 # x1 
 x2 = st.slider('Select culmen length (mm)', 25, 70, 40)
-x3 = st.slider("เลือก culmen depth (mm)", 10,30,15 )
-x4 = st.slider("เลือก flipper length (mm)", 150,250,200)
-x5 = st.slider("เลือก body mass (g)", 2500,6500,3000)
-x6 = st.radio("เลือก sex ",sex_encoder.classes_)
+x3 = st.slider("Select culmen depth (mm)", 10,30,15 )
+x4 = st.slider("Select flipper length (mm)", 150,250,200)
+x5 = st.slider("Select body mass (g)", 2500,6500,3000)
+x6 = st.radio("Select sex ",sex_encoder.classes_)
 x6 = sex_encoder.transform([x6])[0]
 
 x_new = pd.DataFrame(data=np.array([x1, x2, x3, x4, x5, x6]).reshape(1,-1), 
