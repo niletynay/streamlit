@@ -5,7 +5,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 import streamlit as st 
 
-model = pickle.load(open('model.penguins.sav','rb'))
+model = pickle.load(open('workshop-deployML-streamlit/model.penguins.sav','rb'))
 species_encoder = pickle.load(open('encoder.species.sav','rb'))
 island_encoder = pickle.load(open('encoder.island.sav','rb'))
 sex_encoder = pickle.load(open('encoder.sex.sav','rb'))
